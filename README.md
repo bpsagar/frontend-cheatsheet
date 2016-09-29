@@ -16,17 +16,21 @@ npm install --save babel-polyfill
 Webpack configuration file `webpack.config.js`
 ```
 const webpack = require('webpack');
+const path = require('path');
+
+const SRC_DIR = path.resolve(__dirname, 'src');
+const DIST_DIR = path.resolve(__dirname, 'dist');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: SRC_DIR + '/app.js',
   output: {
-    path: './dist',
+    path: DIST_DIR,
     filename: 'app.bundle.js'
   },
   module: {
     loaders: [{
       test: /\.js$/,
-      exclude: /node_modules/,
+      include: SRC_DIR,
       loader: 'babel-loader'
     }]
   },
@@ -44,5 +48,24 @@ module.exports = {
 ```
 Babel configuration file `.babelrc`
 ```
-{ "presets": [ "es2015" ] }
+{
+  "presets": [
+    "es2015"
+  ]
+}
+```
+
+## Setting up React
+```
+npm install --save-dev babel-preset-react
+npm install --save react react-dom
+```
+Add `react` to `presets` in `.babelrc`
+```
+{
+  "presets": [
+    ...
+    "react"
+  ]
+}
 ```
