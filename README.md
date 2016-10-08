@@ -69,3 +69,16 @@ Add `react` to `presets` in `.babelrc`
   ]
 }
 ```
+
+## Setting up Redux
+`redux-thunk` for asynchronous actions.
+`redux-logger` for logging actions and state changes.
+`react-redux` for mapping redux state, dispatching actions to react component props.
+`immutable` for redux store's state.
+```
+npm install --save redux
+npm install --save redux-thunk
+npm install --save redux-logger
+npm install --save react-redux
+nom install --save immutable
+```
