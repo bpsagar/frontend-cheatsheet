@@ -82,3 +82,5 @@ npm install --save redux-logger
 npm install --save react-redux
 nom install --save immutable
 ```
+## Setting up other things:
+1. [SASS compiler with Webpack](./Webpack-SASS.md)
