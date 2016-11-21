@@ -9,7 +9,7 @@ Use this project as a cheatsheet/starter kit for developing front end applicatio
 ```
 npm init
 npm install --save-dev webpack
-npm install --save-dev babel-core babel-preset-es2015
+npm install --save-dev babel-core babel-preset-es2015 babel-preset-stage-0
 npm install --save-dev babel-loader
 npm install --save babel-polyfill
 ```
@@ -50,7 +50,7 @@ Babel configuration file `.babelrc`
 ```
 {
   "presets": [
-    "es2015"
+    "es2015", "stage-0"
   ]
 }
 ```
